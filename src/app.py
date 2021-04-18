@@ -9,8 +9,8 @@ import base64
 import requests
 
 # Import fast.ai Library
-from fastai import *
 from fastai.vision import *
+from fastai.vision.all import *
 
 # Flask utils
 from flask import Flask, redirect, url_for, render_template, request
