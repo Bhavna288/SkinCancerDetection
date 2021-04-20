@@ -16,7 +16,7 @@ ADD src src
 # Run it once to trigger densenet download
 RUN python src/app.py prepare
 
-EXPOSE 3000
+EXPOSE 8000
 
 # Start the server
 CMD ["python", "src/app.py", "serve"]
