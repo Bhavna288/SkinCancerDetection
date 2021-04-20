@@ -9,8 +9,8 @@ import base64
 import requests
 
 # Import fast.ai Library
+from fastai import *
 from fastai.vision import *
-from fastai.vision.all import *
 
 # Flask utils
 from flask import Flask, redirect, url_for, render_template, request
@@ -24,14 +24,14 @@ PATH_TO_MODELS_DIR = Path('../') # by default just use /models in root dir
 classes = ['Actinic keratoses', 'Basal cell carcinoma', 'Benign keratosis',
            'Dermatofibroma', 'Melanocytic nevi', 'Melanoma', 'Vascular lesions']
 
-# def setup_model_pth(path_to_pth_file, learner_name_to_load, classes):
-#     data = ImageDataBunch.single_from_classes(
-#         path_to_pth_file, classes, ds_tfms=get_transforms(), size=224).normalize(imagenet_stats)
-#     learn = cnn_learner(data, models.densenet169, model_dir='models')
-#     learn.load(learner_name_to_load, device=torch.device('cpu'))
-#     return learn
+def setup_model_pth(path_to_pth_file, learner_name_to_load, classes):
+    data = ImageDataBunch.single_from_classes(
+        path_to_pth_file, classes, ds_tfms=get_transforms(), size=224).normalize(imagenet_stats)
+    learn = cnn_learner(data, models.densenet169, model_dir='models')
+    learn.load(learner_name_to_load, device=torch.device('cpu'))
+    return learn
 
-# learn = setup_model_pth(PATH_TO_MODELS_DIR, NAME_OF_FILE, classes)
+learn = setup_model_pth(PATH_TO_MODELS_DIR, NAME_OF_FILE, classes)
 
 def encode(img):
     img = (image2np(img.data) * 255).astype('uint8')
