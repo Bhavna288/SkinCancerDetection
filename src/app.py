@@ -84,7 +84,7 @@ def classify_url():
     
 
 if __name__ == '__main__':
-    port = os.environ.get('PORT', 8000)
+    port = os.environ.get('PORT', 3000)
 
     if "prepare" not in sys.argv:
         app.run(debug=False, host='0.0.0.0', port=port)
