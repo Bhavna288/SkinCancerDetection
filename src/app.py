@@ -54,12 +54,10 @@ def model_predict(img):
     result = {"class":pred_class, "probs":pred_probs, "image":img_data}
     return render_template('result.html', result=result)
    
-
 @app.route('/', methods=['GET', "POST"])
 def index():
     # Main page
     return render_template('index.html')
-
 
 @app.route('/upload', methods=["POST", "GET"])
 def upload():
