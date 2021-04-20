@@ -20,7 +20,7 @@ from PIL import Image as PILImage
 app = Flask(__name__)
 
 NAME_OF_FILE = 'model_best' # Name of your exported file
-PATH_TO_MODELS_DIR = Path('../') # by default just use /models in root dir
+PATH_TO_MODELS_DIR = Path('./') # by default just use /models in root dir
 classes = ['Actinic keratoses', 'Basal cell carcinoma', 'Benign keratosis',
            'Dermatofibroma', 'Melanocytic nevi', 'Melanoma', 'Vascular lesions']
 
