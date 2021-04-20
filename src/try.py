@@ -1,2 +1,2 @@
-import fastai
-print(fastai.__version__)
+import torch
+print(torch.__version__)

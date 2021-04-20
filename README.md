@@ -2,6 +2,12 @@
 <!-- ![Skin Cancer Detector](https://user-images.githubusercontent.com/34622266/57803457-b8f95780-776d-11e9-80d7-ab1dcd1faf71.PNG)  -->
 <!-- ![Skin Cancer Detector](https://user-images.githubusercontent.com/34622266/57803275-3e303c80-776d-11e9-97b7-dbbae436cef5.PNG) -->
 
+<!-- Flask
+gunicorn
+numpy
+https://download.pytorch.org/whl/cpu/torch-1.0.0-cp36-cp36m-linux_x86_64.whl
+fastai==1.0.52 -->
+
 ## Dependencies
 
 - Python 3.6 <br/>
