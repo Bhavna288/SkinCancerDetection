@@ -81,7 +81,6 @@ def classify_url():
             preds = model_predict(response.content)
             return preds
     return 'OK'
-    
 
 if __name__ == '__main__':
     port = os.environ.get('PORT', 8000)
