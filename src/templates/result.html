@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<html>
 
-<body>
   <p>Prediction: <b>{{result.get("class")}}</b></p>
 <table class="table table-striped">
   <thead>
@@ -22,11 +20,8 @@
   </tbody>
 </table>
 
-</body>
 <figure class="figure">
   <img src="data:image/png;base64, {{result.get('image')}}" class="figure-img img-thumbnail input-image">
 </figure>
-
-</html>
 
 {% endblock %}
