@@ -2,6 +2,7 @@ FROM python:3.6-slim-stretch
 
 RUN apt update && \
     apt install -y python3-dev gcc
+RUN python -m venv antenv
 
 WORKDIR app 
 # Install pytorch cpu version
