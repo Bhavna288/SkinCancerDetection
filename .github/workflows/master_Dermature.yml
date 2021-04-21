@@ -59,4 +59,4 @@ jobs:
         with:
           app-name: 'Dermature'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7247AD4B997541F0AB0865A62B8A2E5E }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_d990448755f24b4daff5909a209d911b }}
