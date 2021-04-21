@@ -84,4 +84,4 @@ if __name__ == '__main__':
     port = os.environ.get('PORT', 8000)
 
     if "prepare" not in sys.argv:
-        app.run(debug=False, host='0.0.0.0', port=port)
+        app.run(debug=False, host='52.140.106.225', port=port)
