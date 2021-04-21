@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\Bhavna\\AppData\\Local\\Programs\\Orange\\python.exe",
+    "python.pythonPath": "C:\\Users\\Bhavna\\anaconda3\\python.exe",
     "appService.zipIgnorePattern": [
         "__pycache__{,/**}",
         "*.py[cod]",
