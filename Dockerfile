@@ -14,9 +14,9 @@ ADD models models
 ADD src src
 
 # Run it once to trigger densenet download
-RUN python application.py prepare
+RUN python src/app.py prepare
 
 EXPOSE 8000
 
 # Start the server
-CMD ["python", "application.py", "serve"]
+CMD ["python", "src/app.py", "serve"]
