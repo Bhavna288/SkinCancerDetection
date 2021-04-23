@@ -52,7 +52,7 @@ def model_predict(img):
 	
     img_data = encode(img)
     result = {"class":pred_class, "probs":pred_probs, "image":img_data}
-    return render_template('result.html', result=result)
+    return render_template('result.html', result=result, scroll='result')
    
 @app.route('/', methods=['GET', "POST"])
 def index():
