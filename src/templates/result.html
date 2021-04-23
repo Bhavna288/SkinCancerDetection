@@ -1,27 +1,45 @@
 {% extends "base.html" %}
 {% block content %}
 
-  <p>Prediction: <b>{{result.get("class")}}</b></p>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">Lesion type</th>
-      <th scope="col">Confidence</th>
-    </tr>
-  </thead>
-  <tbody>
-    {%for i in range(0, 7)%}
-    <tr>
-      <th scope="row">{{result.get("probs")[i][0]}}</th>
-      <td>{{result.get("probs")[i][1]}}</td>
-     
-    </tr>
-    {%endfor%}
-  </tbody>
-</table>
+    <!-- ======= Result Section ======= -->
+    <section id="result" class="result">
+      <div class="container">
 
-<figure class="figure">
-  <img src="data:image/png;base64, {{result.get('image')}}" class="figure-img img-thumbnail input-image">
-</figure>
+        <div class="section-title" data-aos="zoom-out">
+          <h2>Results</h2>
+          <p>Prediction: <b>{{result.get("class")}}</b></p>
+        </div>
+
+        <div class="row content" data-aos="fade-up">
+          <div class="col-lg-6 col-sm-12">
+
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Lesion type</th>
+                  <th scope="col">Confidence</th>
+                  <td scope="col" rowspan="8">
+                    
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                {%for i in range(0, 7)%}
+                <tr>
+                  <th scope="row">{{result.get("probs")[i][0]}}</th>
+                  <td>{{result.get("probs")[i][1]}}</td>
+                </tr>
+                {%endfor%}
+              </tbody>
+            </table>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <figure class="figure" style="width: 100%; height: 100%;">
+              <img src="data:image/png;base64, {{result.get('image')}}" class="figure-img img-thumbnail input-image">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Result Section -->
 
 {% endblock %}
