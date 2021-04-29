@@ -1,162 +1,165 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+  <div class="container">
 
-        <div class="section-title" data-aos="zoom-out">
-          <h2>About</h2>
-          <p>Skin Cancer</p>
-        </div>
+    <div class="section-title" data-aos="zoom-out">
+      <h2>About</h2>
+      <p>Skin Cancer</p>
+    </div>
 
-        <div class="row content" data-aos="fade-up">
-          <div class="col-lg-6">
-            <p>
-              There are two main types of skin cancer: melanoma and non-melanoma. The most common non-melanoma tumours are basal cell carcinoma and squamous cell carcinoma. Following are the types of Skin Cancer:
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Actinic keratoses</li>
-              <li><i class="ri-check-double-line"></i> Basal cell carcinoma</li>
-              <li><i class="ri-check-double-line"></i> Melanoma</li>
-              <li><i class="ri-check-double-line"></i> Dermatofibroma</li>
-              <li><i class="ri-check-double-line"></i> Benign keratosis	</li>
-              <li><i class="ri-check-double-line"></i> Melanocytic nevus</li>
-              <li><i class="ri-check-double-line"></i> Vascular lesions</li>
-            </ul>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-              Melanoma of the skin is the 19th most commonly occurring cancer in men and women. There were nearly 300,000 new cases in 2018. Non-melanoma skin cancer is the 5th most commonly occurring cancer in men and women, with over 1 million diagnoses worldwide in 2018, although this is likely to be an underestimate.
-            </p>
-          </div>
-        </div>
-
+    <div class="row content" data-aos="fade-up">
+      <div class="col-lg-6">
+        <p>
+          There are two main types of skin cancer: melanoma and non-melanoma. The most common non-melanoma tumours are
+          basal cell carcinoma and squamous cell carcinoma. Following are the types of Skin Cancer:
+        </p>
+        <ul>
+          <li><i class="ri-check-double-line"></i> Actinic keratoses</li>
+          <li><i class="ri-check-double-line"></i> Basal cell carcinoma</li>
+          <li><i class="ri-check-double-line"></i> Melanoma</li>
+          <li><i class="ri-check-double-line"></i> Dermatofibroma</li>
+          <li><i class="ri-check-double-line"></i> Benign keratosis </li>
+          <li><i class="ri-check-double-line"></i> Melanocytic nevus</li>
+          <li><i class="ri-check-double-line"></i> Vascular lesions</li>
+        </ul>
       </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Detection Section ======= -->
-    <section id="detection" class="cta">
-      <div class="container" data-aos="zoom-out">
-        <h3>Detect Now</h3>
-        <form action="/upload" id="upload-file" method="post" enctype="multipart/form-data">
-          <div class="row">
-            <div class="col-lg-9 text-center text-lg-left">
-              <p> Select image to upload and press Detect: </p>
-              <div class="custom-file">
-                <input type="file" class="custom-file-input" name="file" id="customFile">
-                <label class="custom-file-label" for="customFile">Choose file</label>
-              </div>
-            </div>
-            <div class="col-lg-3 cta-btn-container text-center">
-              <input type="submit" class="cta-btn align-middle" id="btn-predict" style="border: none;" value="Detect" />
-            </div>
-          </div>
-        </form>
-        <br> 
-        <form action="/classify-url" id="submit-url" method="post">
-          <div class="row">
-              <div class="col-lg-9 text-center text-lg-left">
-                <p class="comment">Enter image URL and press Detect:</p>
-                    <div class="col-xs-4">
-                        <input type="url" class="form-control" name="url" id="url-input" placeholder="Enter image URL">
-                    </div>
-              </div>
-              <div class="col-lg-3 cta-btn-container text-center">
-                <input type="submit" class="cta-btn align-middle" value="Detect" style="border: none;">
-              </div>
-          </div>
-        </form>
-
+      <div class="col-lg-6 pt-4 pt-lg-0">
+        <p>
+          Melanoma of the skin is the 19th most commonly occurring cancer in men and women. There were nearly 300,000
+          new cases in 2018. Non-melanoma skin cancer is the 5th most commonly occurring cancer in men and women, with
+          over 1 million diagnoses worldwide in 2018, although this is likely to be an underestimate.
+        </p>
       </div>
-    </section><!-- End Detection Section -->
+    </div>
 
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
-      <div class="container">
+  </div>
+</section><!-- End About Section -->
 
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Team</h2>
-          <p>Our Hardworking Team</p>
+<!-- ======= Detection Section ======= -->
+<section id="detection" class="cta">
+  <div class="container" data-aos="zoom-out">
+    <h3>Detect Now</h3>
+    <form action="/upload" id="upload-file" method="post" enctype="multipart/form-data">
+      <div class="row">
+        <div class="col-lg-9 text-center text-lg-left">
+          <p> Select image to upload and press Detect: </p>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" name="file" id="customFile">
+            <label class="custom-file-label" for="customFile">Choose file</label>
+          </div>
         </div>
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" style="padding: 5px;">
-            <div class="member" data-aos="fade-up">
-              <div class="member-img">
-                <img src="{{ url_for('static', filename='img/team/bt.jpg') }}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Bhavna Tahelyani</h4>
-                <span>Chief Executive Officer</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" style="padding: 5px;">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="{{ url_for('static', filename='img/team/js.jpeg') }}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Janvi Solanki</h4>
-                <span>Product Manager</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" style="padding: 5px;">
-            <div class="member" data-aos="fade-up" data-aos-delay="200">
-              <div class="member-img">
-                <img src="{{ url_for('static', filename='img/team/ss.jpeg') }}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Shaili Shah</h4>
-                <span>CTO</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" style="padding: 5px;">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="{{ url_for('static', filename='img/team/as.jpeg') }}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Ayush Singla</h4>
-                <span>Accountant</span>
-              </div>
-            </div>
-          </div>
-
+        <div class="col-lg-3 cta-btn-container text-center">
+          <input type="submit" class="cta-btn align-middle" id="btn-predict" style="border: none;" value="Detect" />
         </div>
-
       </div>
-    </section><!-- End Team Section -->
+    </form>
+    <br>
+    <form action="/classify-url" id="submit-url" method="post">
+      <div class="row">
+        <div class="col-lg-9 text-center text-lg-left">
+          <p class="comment">Enter image URL and press Detect:</p>
+          <div class="col-xs-4">
+            <input type="url" class="form-control" name="url" id="url-input" placeholder="Enter image URL">
+          </div>
+        </div>
+        <div class="col-lg-3 cta-btn-container text-center">
+          <input type="submit" class="cta-btn align-middle" value="Detect" style="border: none;">
+        </div>
+      </div>
+    </form>
+
+  </div>
+</section><!-- End Detection Section -->
+
+<!-- ======= Team Section ======= -->
+<section id="team" class="team">
+  <div class="container">
+
+    <div class="section-title" data-aos="zoom-out">
+      <h2>Team</h2>
+      <p>Our Hardworking Team</p>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-3 col-md-6 d-flex align-items-stretch" style="padding: 5px;">
+        <div class="member" data-aos="fade-up">
+          <div class="member-img">
+            <img src="{{ url_for('static', filename='img/team/bt.jpg') }}" class="img-fluid" alt="">
+            <div class="social">
+              <a href="https://twitter.com/bhavnatahelyani"><i class="icofont-twitter"></i></a>
+              <a href="https://github.com/Bhavna288"><i class="icofont-github"></i></a>
+              <a href=""><i class="icofont-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/bhavna-tahelyani/"><i class="icofont-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Bhavna Tahelyani</h4>
+            <span>Backend Developer</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 d-flex align-items-stretch" style="padding: 5px;">
+        <div class="member" data-aos="fade-up" data-aos-delay="100">
+          <div class="member-img">
+            <img src="{{ url_for('static', filename='img/team/js.jpeg') }}" class="img-fluid" alt="">
+            <div class="social">
+              <a href="https://twitter.com/JanviSo23968522"><i class="icofont-twitter"></i></a>
+              <a href="https://github.com/janvisolanki"><i class="icofont-github"></i></a>
+              <a href=""><i class="icofont-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/janvi-solanki-27ab86189/"><i class="icofont-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Janvi Solanki</h4>
+            <span>Backend Developer</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 d-flex align-items-stretch" style="padding: 5px;">
+        <div class="member" data-aos="fade-up" data-aos-delay="200">
+          <div class="member-img">
+            <img src="{{ url_for('static', filename='img/team/ss.jpeg') }}" class="img-fluid" alt="">
+            <div class="social">
+              <a href=""><i class="icofont-twitter"></i></a>
+              <a href="https://github.com/shaili118"><i class="icofont-github"></i></a>
+              <a href="https://www.instagram.com/shailiii.18/"><i class="icofont-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/shailishah118/"><i class="icofont-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Shaili Shah</h4>
+            <span>Frontend Developer</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 d-flex align-items-stretch" style="padding: 5px;">
+        <div class="member" data-aos="fade-up" data-aos-delay="300">
+          <div class="member-img">
+            <img src="{{ url_for('static', filename='img/team/as.jpeg') }}" class="img-fluid" alt="">
+            <div class="social">
+              <a href="https://twitter.com/ayush9130"><i class="icofont-twitter"></i></a>
+              <a href="https://github.com/ayu913"><i class="icofont-github"></i></a>
+              <a href="https://www.instagram.com/ayu__913/"><i class="icofont-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/ayush-singla-797b881a0/"><i class="icofont-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Ayush Singla</h4>
+            <span>Frontend Developer</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Team Section -->
 
 {% endblock %}
