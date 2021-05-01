@@ -1,19 +1,20 @@
-## Screenshots
-<!-- ![Skin Cancer Detector](https://user-images.githubusercontent.com/34622266/57803457-b8f95780-776d-11e9-80d7-ab1dcd1faf71.PNG)  -->
-<!-- ![Skin Cancer Detector](https://user-images.githubusercontent.com/34622266/57803275-3e303c80-776d-11e9-97b7-dbbae436cef5.PNG) -->
-
-<!-- Flask
-gunicorn
-numpy
-https://download.pytorch.org/whl/cpu/torch-1.0.0-cp36-cp36m-linux_x86_64.whl
-fastai==1.0.52 -->
+## Overview
+This is the source code for a skin cancer detection web app that has been implemented with the Flask framework in python and deployed on **Azure**. The model has been built using **FastAI**. The final classifier achieved an accuracy of 91.2% and an F1-score of 91.7% on validation data. The web app is available at [https://dermature.azurewebsites.net/]
 
 ## Dependencies
 
 - Python 3.6 <br/>
-- Fastai 1.0.52 <br/>
+- Fastai 1.0.58 <br/>
 - Flask <br/>
 - Gunicorn
 
 ## Instructions
-First run `sudo pip install -r requirements.txt` to install the required dependencies. Then launch the app by running `python app.py`. Open up your browser and navigate to http://localhost:8008
+First run `sudo pip install -r requirements.txt` to install the required dependencies. Then launch the app by running `python app.py`. Open up your browser and navigate to http://localhost:8000
+
+## Visit our website
+
+https://dermature.azurewebsites.net/
+
+## References
+
+https://github.com/dspanah/Skin-Cancer-Detection-TransferLearning-Fastai-Flask
