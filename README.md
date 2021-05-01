@@ -1,5 +1,5 @@
 ## Overview
-This is the source code for a skin cancer detection web app that has been implemented with the Flask framework in python and deployed on **Azure**. The model has been built using **FastAI**. The final classifier achieved an accuracy of 91.2% and an F1-score of 91.7% on validation data. The web app is available at [https://dermature.azurewebsites.net/]
+This is the source code for a skin cancer detection web app that has been implemented with the Flask framework in python and deployed on **Azure**. The model has been built using **FastAI**. The final classifier achieved an accuracy of 91.2% and an F1-score of 91.7% on validation data. The web app is available at https://dermature.azurewebsites.net/
 
 ## Dependencies
 
